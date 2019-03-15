@@ -1,22 +1,19 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url('assets/img/hero.jpg');">
+<div class="hero" style="background-image: url('<?php echo get_field('hero_image')['url']; ?>');">
 	<div class="wrapper">
 		<div class="flex-wrapper">
 			<div class="hero__content">
-				<p class="hero__title">One hours spin is</p>
+				<p class="hero__title"><?php echo get_field('hero_text'); ?></p>
 				<div class="hero__text">
-					<span>Only 4% of your day</span>
+					<span><?php echo get_field('hero_statistic'); ?></span>
 				</div>
 
-				<p class="hero__description"><span>The</span> indoor cycling experience in Nottingham, UK</p>
+				<p class="hero__description"><span><?php echo get_field('hero_span_text'); ?></span> <?php echo get_field('hero_description'); ?></p>
 
-				<p class="hero__description hero__description--blue">Opening May 2019</p>
+				<p class="hero__description hero__description--blue"><?php echo get_field('hero_opening_date'); ?></p>
 
-				<form action="" method="POST" class="hero__form">
-					<input type="email" name="email" class="hero__email" placeholder="Signup for updates...">
-					<i class="fas fa-angle-double-right"></i>
-				</form>
+				<?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1, 'title' => false, 'description' => false ) ); ?>
 
 			</div>
 		</div>

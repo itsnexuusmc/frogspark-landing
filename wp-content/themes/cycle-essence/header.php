@@ -15,8 +15,8 @@
 						<?php include ('logo.php'); ?>
 
 						<div class="header__end-content">
-							<p class="header__address">Street Name, Nottingham, NG1 4GY</p>
-							<a href="mailto:info@cycleessence.co.uk" class="header__email">INFO<span>@</span>CYCLEESSENCE.CO.UK</a>
+							<div class="header__address"><?php the_field('contact_address', 'options'); ?></div>
+							<a href="mailto:<?php the_field('contact_email', 'options'); ?>" class="header__email"><?php the_field('contact_email', 'options'); ?></a>
 						</div>
 					</div>
 				</div>
