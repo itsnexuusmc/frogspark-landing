@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'DINPro';
+    src: url('../assets/fonts/DINPro-CondMedium.eot');
+    src: url('../assets/fonts/DINPro-CondMedium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/DINPro-CondMedium.woff2') format('woff2'),
+        url('../assets/fonts/DINPro-CondMedium.woff') format('woff'),
+        url('../assets/fonts/DINPro-CondMedium.ttf') format('truetype'),
+        url('../assets/fonts/DINPro-CondMedium.svg#DINPro-CondMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('../assets/fonts/DINPro-CondBold.eot');
+    src: url('../assets/fonts/DINPro-CondBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/DINPro-CondBold.woff2') format('woff2'),
+        url('../assets/fonts/DINPro-CondBold.woff') format('woff'),
+        url('../assets/fonts/DINPro-CondBold.ttf') format('truetype'),
+        url('../assets/fonts/DINPro-CondBold.svg#DINPro-CondBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('../assets/fonts/DINPro-CondLight.eot');
+    src: url('../assets/fonts/DINPro-CondLight.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/DINPro-CondLight.woff2') format('woff2'),
+        url('../assets/fonts/DINPro-CondLight.woff') format('woff'),
+        url('../assets/fonts/DINPro-CondLight.ttf') format('truetype'),
+        url('../assets/fonts/DINPro-CondLight.svg#DINPro-CondLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}

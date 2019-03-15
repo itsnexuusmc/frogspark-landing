@@ -1,0 +1,38 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'DINPro';
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+::-moz-placeholder {
+  color: white;
+}
+:-ms-input-placeholder {
+  color: white;
+}
+:-moz-placeholder {
+  color: white;
+}
+
+.wrapper {
+	width: 95%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.flex-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+}
