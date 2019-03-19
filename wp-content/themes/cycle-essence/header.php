@@ -6,7 +6,12 @@
 
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class('do-page-transition'); ?>>
+		<div class="page-transition">
+			<div class="bike-wrap">
+				<?php include ('loader.php'); ?>
+			</div>
+		</div>
 		<header class="header">
 			<div class="wrapper">
 				<div class="flex-wrapper">

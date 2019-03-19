@@ -1,5 +1,16 @@
 (function($, root, undefined) {
 	 $(function() {
+	 	// Add a loader to the page
+	 	function pageTransition() {
+			$(document).ready(function() {
+		        setTimeout(function(){ 
+		            $('body').removeClass('do-page-transition');
+		        }, 150);
+		    });
+		}
+
+		pageTransition();
+
 		function calculateHeroHeight() {
 			var windowHeight = $(window).outerHeight();
 

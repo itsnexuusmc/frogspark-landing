@@ -34,7 +34,7 @@
   font-size: 75px;
   color: white;
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.35em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -214,6 +214,65 @@
 .header__email span {
   font-family: 'Arial', sans-serif;
   font-size: 18px;
+}
+
+.bike svg #front-wheel-highlight {
+  stroke-dasharray: 45;
+  stroke-dashoffset: 45;
+  -webkit-animation: wheelspin 1s linear infinite;
+          animation: wheelspin 1s linear infinite;
+}
+
+@-webkit-keyframes wheelspin {
+  0% {
+    stroke-dashoffset: 45;
+  }
+  100% {
+    stroke-dashoffset: -135;
+  }
+}
+
+@keyframes wheelspin {
+  0% {
+    stroke-dashoffset: 45;
+  }
+  100% {
+    stroke-dashoffset: -135;
+  }
+}
+
+.page-transition {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+@media (max-width: 993px) {
+  .page-transition {
+    display: none;
+  }
+}
+
+.page-transition .bike-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body.do-page-transition .page-transition {
+  opacity: 1;
+  visibility: visible;
 }
 
 .frm_forms {
