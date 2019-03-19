@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .hero__content {
@@ -35,6 +36,7 @@
   margin: 0;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 993px) {
@@ -48,7 +50,7 @@
   color: black;
   font-size: 75px;
   font-weight: bold;
-  padding: 10px;
+  padding: 5px 15px;
   width: 50%;
   text-align: center;
   mix-blend-mode: screen;
@@ -66,42 +68,32 @@
   letter-spacing: 2px;
   color: white;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: 1.25em;
 }
 
 .hero__description--blue {
   color: #00E7FF;
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 993px) {
+  .hero__description--blue {
+    margin-bottom: 1em;
+  }
 }
 
 .hero__description span {
   text-decoration: underline;
 }
 
-.hero__form {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.hero__form i {
-  color: white;
-  position: absolute;
-  right: 0;
-}
-
-.hero__email {
-  background-color: unset;
-  color: white;
-  border: unset;
-  border-bottom: 1px solid white;
-  padding-bottom: 0.5em;
+.filter {
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .header {
@@ -114,6 +106,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 993px) {
@@ -204,6 +199,65 @@
   .header__email {
     margin-left: 0;
   }
+}
+
+.frm_forms {
+  width: 50%;
+}
+
+@media (max-width: 993px) {
+  .frm_forms {
+    width: 100%;
+  }
+}
+
+.frm_form_field {
+  position: relative;
+}
+
+fieldset {
+  border: 0;
+}
+
+.frm_primary_label {
+  display: none;
+}
+
+input[type='email'] {
+  background-color: unset;
+  border: 0;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  font-family: 'DINPro';
+  color: white;
+  padding-bottom: 0.5em;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-appearance: none;
+}
+
+input[type='email']:hover {
+  cursor: pointer;
+}
+
+input[type='email']:focus {
+  outline: none;
+}
+
+.frm_submit {
+  display: none;
+}
+
+.arrows {
+  position: absolute;
+  right: 0;
+  color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 body {

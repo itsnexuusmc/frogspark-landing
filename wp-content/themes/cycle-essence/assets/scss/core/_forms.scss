@@ -1,0 +1,63 @@
+// .frm_form_fields {
+// 	width: 100%;
+// 	border: 0;
+// }
+
+.frm_forms {
+	width: 50%;
+
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+}
+
+.frm_form_field {
+	position: relative;
+}
+
+fieldset {
+	border: 0;
+}
+
+.frm_primary_label {
+	display: none;
+}
+
+input[type='email'] {
+	background-color: unset;
+
+	border: 0;
+
+	border-bottom: 1px solid white;
+	font-size: 16px;
+	font-family: 'DINPro';
+	color: white;
+
+	padding-bottom: 0.5em;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	position: relative;
+	-webkit-appearance: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.frm_submit {
+	display: none;
+}
+
+.arrows {
+	position: absolute;
+	right: 0;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+
+	transition: all 0.2s ease-in-out;
+}

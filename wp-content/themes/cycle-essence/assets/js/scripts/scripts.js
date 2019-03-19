@@ -11,5 +11,9 @@
 		}
 
 		calculateHeroHeight();
+
+		$(window).resize(function() {
+			calculateHeroHeight();
+		});
 	})
 })(jQuery, this);

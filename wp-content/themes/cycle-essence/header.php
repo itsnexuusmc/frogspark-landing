@@ -12,7 +12,7 @@
 				<div class="flex-wrapper">
 					<div class="header__content">
 
-						<?php include ('logo.php'); ?>
+						<a href="/"><?php include ('logo.php'); ?></a>
 
 						<div class="header__end-content">
 							<div class="header__address"><?php the_field('contact_address', 'options'); ?></div>

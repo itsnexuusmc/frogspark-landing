@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <div class="hero" style="background-image: url('<?php echo get_field('hero_image')['url']; ?>');">
+	<div class="filter"></div>
 	<div class="wrapper">
 		<div class="flex-wrapper">
 			<div class="hero__content">
