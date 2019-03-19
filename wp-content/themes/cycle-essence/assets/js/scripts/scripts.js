@@ -15,5 +15,10 @@
 		$(window).resize(function() {
 			calculateHeroHeight();
 		});
+
+		$('.mobile-toggle').on('click', function() {
+			$(this).toggleClass('is-active');
+			$('.header__end-content').toggleClass('is-active');
+		});
 	})
 })(jQuery, this);
