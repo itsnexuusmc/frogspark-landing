@@ -1,7 +1,8 @@
-<?php 
+<?php
+	// Require ACF options pages
 	require_once(__DIR__ . '/includes/acf.php');
 
-	// Add stylesheet and scripts
+	// Register and enqueue the scripts
 	function cycleessence_add_header_scripts() {
 		if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 			wp_register_script('cycleessence', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '1.0.0');
@@ -10,15 +11,19 @@
 		}
 	}
 
+	// Add the scripts
 	add_action('init', 'cycleessence_add_header_scripts');
 
+	// Add the stylesheet
 	function cycleessence_add_styles() {
 		wp_register_style('cycleessence', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 		wp_enqueue_style('cycleessence');
 	}
 
+	// Enqueue it
 	add_action('wp_enqueue_scripts', 'cycleessence_add_styles');
 
+	// Remove unnecessary stuff from the header
 	function cycleessence_clean_up_head() {
 		remove_action('wp_head', 'feed_links_extra', 3);
 		remove_action('wp_head', 'feed_links', 2);
@@ -42,8 +47,10 @@
 		remove_filter('comment_text_rss', 'wp_staticize_emoji');
 	}
 
+	// Add the clean up head
 	add_action('init', 'cycleessence_clean_up_head');
 
+	// Remove the admin bar
 	add_filter('show_admin_bar', function() {return false;});
 ?>
 
