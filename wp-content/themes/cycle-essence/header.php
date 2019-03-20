@@ -9,7 +9,7 @@
 	<body <?php body_class('do-page-transition'); ?>>
 		<div class="page-transition">
 			<div class="bike-wrap">
-				<?php include ('loader.php'); ?>
+				<?php echo file_get_contents(get_template_directory_uri() . '/assets/img/loader.svg'); ?>
 			</div>
 		</div>
 		<header class="header">
@@ -17,7 +17,7 @@
 				<div class="flex-wrapper">
 					<div class="header__content">
 
-						<a href="/"><?php include ('logo.php'); ?></a>
+						<a href="/"><?php echo file_get_contents(get_template_directory_uri() . '/assets/img/logo.svg'); ?></a>
 
 						<div class="header__end-content">
 							<div class="header__address"><?php the_field('contact_address', 'options'); ?></div>
